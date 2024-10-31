@@ -19,15 +19,16 @@ function captureImage() {
     const formData = new FormData();
     formData.append("image", blob, "frame.jpg");
 
-    fetch("/predict", {
+    fetch("http://127.0.0.1:5000/predict", {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => {
-        prediction.innerText = `Prediction: ${data.prediction}`;
-        confidence.innerText = `Confidence: ${data.confidence.toFixed(2)}`;
+        prediction.innerText = Prediction: ${data.prediction};
+        confidence.innerText = Confidence: ${data.confidence.toFixed(2)};
       })
-      .catch((error) => console.error("Error:", error));
-  });
-}
+      .catch((error) => console.log("Error:", error));
+    });
+  }
+  
