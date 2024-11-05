@@ -1,5 +1,3 @@
-const cors = require("cors");
-
 // script.js
 
 const video = document.getElementById("video");
@@ -13,7 +11,6 @@ navigator.mediaDevices
   .catch((error) => console.error("Error accessing the webcam", error));
 
 // Capture the current video frame and send it to the backend
-app.use(cors());
 function captureImage() {
   const canvas = document.createElement("canvas");
   canvas.width = video.width;
