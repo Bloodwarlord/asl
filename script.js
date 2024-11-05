@@ -19,7 +19,7 @@ function captureImage() {
     const formData = new FormData();
     formData.append("image", blob, "frame.jpg");
 
-    fetch("/predict", {
+    fetch("https://asl-mu.vercel.app/predict", {
       method: "POST",
       body: formData,
     })
