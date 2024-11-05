@@ -1,4 +1,8 @@
+const cors = require("cors");
+
 // script.js
+
+app.use(cors());
 const video = document.getElementById("video");
 const prediction = document.getElementById("prediction");
 const confidence = document.getElementById("confidence");
